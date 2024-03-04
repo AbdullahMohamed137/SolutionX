@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.SolutionX" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="fontStyleRegular" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/tajawal_regular</item>
+    </style>
+
+    <style name="fontStyleMedium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/tajawal_medium</item>
+    </style>
+
+    <style name="fontStyleBold" parent="@android:style/TextAppearance.Large">
+        <item name="android:fontFamily">@font/tajawal_bold</item>
+    </style>
+</resources>
