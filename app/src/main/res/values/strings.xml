@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello" translatable="false">أهلا بالعالم !</string>
-    <string name="bold" >عريض</string>
-    <string name="medium">متوسط</string>
-    <string name="regular">عادى</string>
-    <string name="english">إنجليزى</string>
-    <string name="arabic">عربى</string>
+    <string name="app_name" translatable="false">solutionX</string>
+    <string name="hello">Hello World !</string>
 </resources>
