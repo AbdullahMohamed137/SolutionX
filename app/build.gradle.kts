@@ -30,6 +30,7 @@ android {
     buildFeatures{
         viewBinding = true
         dataBinding = true
+        buildConfig = true
     }
 
 
@@ -39,6 +40,18 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    flavorDimensions += listOf("logging")
+    productFlavors {
+        create("logCat") {
+            dimension = "logging"
+        }
+        create("logWriter") {
+            dimension = "logging"
+        }
+        create("production") {
+            dimension = "logging"
+        }
     }
 }
 
