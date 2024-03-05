@@ -1,4 +1,5 @@
 package com.example.solutionx.models
 
-class Filter {
+class Filter( val id : Int,
+              val name : String) {
 }
