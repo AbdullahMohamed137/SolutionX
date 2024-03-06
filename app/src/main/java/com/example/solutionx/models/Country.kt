@@ -1,6 +1,6 @@
 package com.example.solutionx.models
 
-class Country(val id : Int,
+data class Country(val id : Int,
               val name : String,
               val currency : String,
               val code : String,
