@@ -17,21 +17,24 @@
             android:id="@+id/btn_country"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/countries" />
+            android:text="@string/countries"
+            style="@style/fontStyleBold"/>
 
         <Button
             android:id="@+id/btn_currency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/currencies"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            style="@style/fontStyleMedium"/>
 
         <Button
             android:id="@+id/btn_filters"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/filters"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            style="@style/fontStyleRegular"/>
 
     </LinearLayout>
 </layout>
