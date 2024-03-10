@@ -5,26 +5,4 @@
     <string name="currencies">العملات</string>
     <string name="filters">المرشحات</string>
 
-    <string name="saudi">السعودية</string>
-    <string name="egypt">مصر</string>
-    <string name="afghanistan">أفغانستان</string>
-    <string name="albania">ألبانيا</string>
-    <string name="algeria">الجزائر</string>
-    <string name="andorra">أندورا</string>
-    <string name="angola">أنغولا</string>
-    <string name="argentina">الأرجنتين</string>
-    <string name="armenia">أرمينيا</string>
-
-    <string name="dollar">دولار امريكي</string>
-    <string name="euro">اليورو</string>
-    <string name="pound">الجنيه المصري</string>
-    <string name="ryialsaudi">الريال السعودي</string>
-    <string name="dirham">الدرهم الإماراتي</string>
-    <string name="dinar">دينار كويتي</string>
-    <string name="riyal">الريال القطري</string>
-    <string name="bahraini">دينار بحريني</string>
-    <string name="omani">الريال العماني</string>
-
-    <string name="filter1">test title 2</string>
-    <string name="filter2">عربى2222</string>
 </resources>

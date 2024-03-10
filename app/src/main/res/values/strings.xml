@@ -5,26 +5,4 @@
     <string name="currencies">Currencies</string>
     <string name="filters">Filters</string>
 
-    <string name="saudi">Saudi Arabia</string>
-    <string name="egypt">Egypt</string>
-    <string name="afghanistan">Afghanistan</string>
-    <string name="albania">Albania</string>
-    <string name="algeria">Algeria</string>
-    <string name="andorra">Andorra</string>
-    <string name="angola">Angola</string>
-    <string name="argentina">Argentina</string>
-    <string name="armenia">Armenia</string>
-
-    <string name="dollar">American Dollar</string>
-    <string name="euro">Euro</string>
-    <string name="pound">Egyptian Pound</string>
-    <string name="ryialsaudi">Saudi Riyal</string>
-    <string name="dirham">Emirati Dirham</string>
-    <string name="dinar">Kuwaiti Dinar</string>
-    <string name="riyal">Qatari Riyal</string>
-    <string name="bahraini">Bahraini Dinar</string>
-    <string name="omani">Omani Riyal</string>
-
-    <string name="filter1">test title 2</string>
-    <string name="filter2">Arabic2222</string>
 </resources>

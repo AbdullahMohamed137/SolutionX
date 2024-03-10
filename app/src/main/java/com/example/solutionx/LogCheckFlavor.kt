@@ -8,18 +8,17 @@ import java.io.FileOutputStream
 
 class LogCheckFlavor(private val context: Context) {
 
-    fun logFlavor(){
+    fun logFlavor(tag : String, message : String){
         when (BuildConfig.FLAVOR) {
             "logCat" -> {
-                Log.d("MyApp", "This is a log message.")
+                Log.d(tag, message)
             }
             "logWriter" -> {
                 val file ="log.txt"
-                val data = "This is a log message."
                 val fileOutPutStream : FileOutputStream = context.openFileOutput(file, Context.MODE_PRIVATE)
-                fileOutPutStream.write(data.toByteArray())
+                fileOutPutStream.write(message.toByteArray())
                 val logFile = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "log.txt")
-                logFile.appendText("This is a log message.")
+                logFile.appendText(message)
             }
             else -> {
 

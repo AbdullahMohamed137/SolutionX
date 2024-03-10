@@ -16,13 +16,13 @@ import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var logCheckFlavor: LogCheckFlavor
+    private var logCheckFlavor: LogCheckFlavor = LogCheckFlavor(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        logCheckFlavor.logFlavor()
+       logCheckFlavor .logFlavor("testLog", "This is a log message you see me !?")
 
         binding.btnCountry.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, CountryActivity::class.java)

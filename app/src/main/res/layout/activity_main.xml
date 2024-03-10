@@ -11,30 +11,33 @@
         android:gravity="center"
         android:padding="20dp"
         android:orientation="vertical">
+        
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextView.Bold"
+            android:text="Hello World !"
+            android:textSize="20sp"/>
 
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextView"
+            android:text="This is a test app."/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_country"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/countries"
-            style="@style/fontStyleBold"/>
+            style="@style/Button"
+            android:layout_marginTop="16dp"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_currency"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/currencies"
-            android:layout_marginTop="10dp"
-            style="@style/fontStyleMedium"/>
+            android:layout_marginTop="16dp"
+            style="@style/Button.OutLine"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_filters"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/filters"
-            android:layout_marginTop="10dp"
-            style="@style/fontStyleRegular"/>
+            android:layout_marginTop="16dp"
+            style="@style/Button.Delete"/>
 
     </LinearLayout>
 </layout>
