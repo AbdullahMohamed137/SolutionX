@@ -1,10 +1,11 @@
 package com.example.solutionx.features.login.domain.useCases
 
-import com.example.solutionx.features.login.data.repository.LocalDsRepository
-import com.example.solutionx.features.login.data.repository.RemoteDsRepository
+import com.example.solutionx.features.login.domain.models.User
+import com.example.solutionx.features.login.domain.repository.ILoginRepository
+import javax.inject.Inject
 
-class LoginWithEmailUC {
-    var localDsRepository = LocalDsRepository()
-    var remoteDsRepository = RemoteDsRepository()
-    fun call(email : String, password : String){}
+class LoginWithEmailUC @Inject constructor(private val loginRepository: ILoginRepository) {
+    suspend operator fun invoke(email: String, password: String) =
+        loginRepository.loginWithEmail(email, password)
+
 }
