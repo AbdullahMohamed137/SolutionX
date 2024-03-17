@@ -3,9 +3,6 @@ package com.example.solutionx.features.login.presenter.viewModel
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.solutionx.features.login.data.models.UserDto
-import com.example.solutionx.features.login.data.models.UserEntity
-import com.example.solutionx.features.login.data.response.UserResponse
 import com.example.solutionx.features.login.domain.models.User
 import com.example.solutionx.features.login.domain.useCases.LoginWithEmailUC
 import com.example.solutionx.features.login.domain.useCases.LoginWithPhoneUC
