@@ -21,36 +21,35 @@ class LoginViewModel @Inject constructor(
     private val getUserWithEmail: LoginWithEmailUC,
     private val getUserWithPhone: LoginWithPhoneUC,
     private val getUserWithSocial: LoginWithSocialUC,
-    private val user: User
 ) : ViewModel() {
 
-    private val _users: MutableStateFlow<UserDto?> = MutableStateFlow(null)
-    val users: StateFlow<UserDto?> = _users
+    private val _users: MutableStateFlow<User?> = MutableStateFlow(null)
+    val users: StateFlow<User?> = _users
 
-    fun getUserEmail() {
+    fun getUserEmail(email: String, password: String) {
         viewModelScope.launch {
             try {
-                _users.value = getUserWithEmail(user.email,user.password)
+                _users.value = getUserWithEmail(email, password)
             } catch (e: Exception) {
                 Log.e("LoginViewModel", e.message.toString())
             }
         }
     }
 
-    fun getUserPhone() {
+    fun getUserPhone(phoneNumber: Int, password: String) {
         viewModelScope.launch {
             try {
-                _users.value = getUserWithPhone(user.phoneNumber)
+                _users.value = getUserWithPhone(phoneNumber, password)
             } catch (e: Exception) {
                 Log.e("LoginViewModel", e.message.toString())
             }
         }
     }
 
-    fun getUserSocial() {
+    fun getUserSocial(email: String, password: String) {
         viewModelScope.launch {
             try {
-                _users.value = getUserWithSocial(user.email, user.password)
+                _users.value = getUserWithSocial(email, password)
             } catch (e: Exception) {
                 Log.e("LoginViewModel", e.message.toString())
             }

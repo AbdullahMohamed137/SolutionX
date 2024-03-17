@@ -2,11 +2,15 @@ package com.example.solutionx.features.login.data.remoteDS
 
 import com.example.solutionx.features.login.data.models.UserDto
 import com.example.solutionx.features.login.data.models.UserEntity
-import com.example.solutionx.features.login.data.response.UserResponse
 import javax.inject.Inject
 
-class MockLoginRemoteDsImpl @Inject constructor() : ILoginRemoteDS {
-    override fun login(): UserDto {
+class LoginRemoteDsImpl @Inject constructor() : ILoginRemoteDS {
+
+    override fun loginEmail(email: String, password: String): UserDto {
+        TODO("Not yet implemented")
+    }
+
+    override fun loginPhone(phoneNumber: Int, password: String): UserDto {
         TODO("Not yet implemented")
     }
 

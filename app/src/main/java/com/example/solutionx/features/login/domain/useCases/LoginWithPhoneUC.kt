@@ -6,6 +6,6 @@ import com.example.solutionx.features.login.domain.repository.ILoginRepository
 import javax.inject.Inject
 
 class LoginWithPhoneUC @Inject constructor(private val loginRepository: ILoginRepository) {
-    suspend operator fun invoke(phoneNumber: Int) = loginRepository.loginWithPhone(phoneNumber)
+    suspend operator fun invoke(phoneNumber: Int, password: String) = loginRepository.loginWithPhone(phoneNumber, password)
 
 }
