@@ -1,10 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-
-    //dagger
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -70,10 +66,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.google.code.gson:gson:2.10.1")
 
-    //dagger
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
-
 
     //viewModel
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
@@ -81,6 +73,4 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation ("androidx.navigation:navigation-fragment-ktx:2.5.3")
 
-    //recyclerGenerator
-    implementation ("com.github.ahmedgomaa97:EasyRecyclerGenerator:2.0.7")
 }

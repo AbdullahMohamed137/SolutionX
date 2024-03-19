@@ -4,13 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.activity.viewModels
-import androidx.lifecycle.lifecycleScope
 import com.example.solutionx.activities.ListActivity
 import com.example.solutionx.databinding.ActivityMainBinding
-import com.example.solutionx.features.login.presenter.viewModel.LoginViewModel
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
 import org.json.JSONObject
 import java.io.InputStream
 
