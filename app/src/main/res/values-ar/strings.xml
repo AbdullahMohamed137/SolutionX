@@ -4,5 +4,6 @@
     <string name="countries">بلاد</string>
     <string name="currencies">العملات</string>
     <string name="filters">المرشحات</string>
+    <string name="empty_password">كلمة السر فارغة</string>
 
 </resources>

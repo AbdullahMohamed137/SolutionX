@@ -11,16 +11,15 @@ object Mapper {
             userEntity.id,
             userEntity.name,
             userEntity.email,
-            userEntity.password,
             userEntity.phoneNumber
         )
     }
 
     fun mapDtoToDomain(userDto: UserDto): User {
-        return User(userDto.id, userDto.name, userDto.email, userDto.password, userDto.phoneNumber)
+        return User(userDto.id, userDto.name, userDto.email, userDto.phoneNumber)
     }
 
     fun mapDomainToEntity(user: User): UserEntity {
-        return UserEntity(user.id, user.name, user.email, user.password, user.phoneNumber)
+        return UserEntity(user.id, user.name, user.email, user.phoneNumber)
     }
 }

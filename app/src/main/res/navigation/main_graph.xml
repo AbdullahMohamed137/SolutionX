@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/loginWithEmailFragment">
+
+    <fragment
+        android:id="@+id/loginWithEmailFragment"
+        android:name="com.example.solutionx.features.login.presenter.activities.LoginWithEmailFragment"
+        android:label="fragment_login_with_email"
+        tools:layout="@layout/fragment_login_with_email" />
+    <fragment
+        android:id="@+id/loginWithSocialFragment"
+        android:name="com.example.solutionx.features.login.presenter.activities.LoginWithSocialFragment"
+        android:label="fragment_login_with_social"
+        tools:layout="@layout/fragment_login_with_social" />
+    <fragment
+        android:id="@+id/loginWithPhoneFragment"
+        android:name="com.example.solutionx.features.login.presenter.activities.LoginWithPhoneFragment"
+        android:label="fragment_login_with_phone"
+        tools:layout="@layout/fragment_login_with_phone" />
+</navigation>

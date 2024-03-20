@@ -5,7 +5,7 @@ import com.example.solutionx.features.login.data.models.UserEntity
 
 interface ILoginRemoteDS {
 
-     fun loginEmail(email: String, password: String) : UserDto
+     suspend fun loginEmail(email: String, password: String) : UserDto
      fun loginPhone(phoneNumber: Int, password: String) : UserDto
 
      fun saveUser(userEntity: UserEntity)

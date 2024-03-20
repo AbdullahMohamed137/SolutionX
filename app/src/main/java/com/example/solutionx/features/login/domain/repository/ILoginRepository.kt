@@ -1,6 +1,5 @@
 package com.example.solutionx.features.login.domain.repository
 
-import com.example.solutionx.features.login.data.models.UserDto
 import com.example.solutionx.features.login.domain.models.User
 
 interface ILoginRepository {
