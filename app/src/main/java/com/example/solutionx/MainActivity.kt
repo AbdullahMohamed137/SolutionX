@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.solutionx.activities.FragmentActivity
 import com.example.solutionx.activities.ListActivity
 import com.example.solutionx.databinding.ActivityMainBinding
 import org.json.JSONObject
@@ -19,10 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         val listOfCountry = loadDataFromJson("countries.json")
         val listOfCurrency = loadDataFromJson("currencies.json")
-        val  listOfFilter = loadDataFromJson("filters.json")
+        val listOfFilter = loadDataFromJson("filters.json")
 
 
-       logCheckFlavor .logFlavor("testLog", "This is a log message you see me !?")
+        logCheckFlavor.logFlavor("testLog", "This is a log message you see me !?")
 
         binding.btnCountry.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, ListActivity::class.java)
@@ -39,12 +40,14 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("list", listOfFilter)
             startActivity(intent)
         })
-
-
+        binding.btnFragments.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, FragmentActivity::class.java)
+            startActivity(intent)
+        })
     }
 
-    private fun loadDataFromJson(fileName: String) : String? {
-        val listObject : InputStream = assets.open(fileName)
+    private fun loadDataFromJson(fileName: String): String? {
+        val listObject: InputStream = assets.open(fileName)
         val jsonString = listObject.bufferedReader().use { it.readText() }
         listObject.close()
         val jsonObject = JSONObject(jsonString)
