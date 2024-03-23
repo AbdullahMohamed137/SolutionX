@@ -1,48 +1,33 @@
 package com.example.solutionx.features.login.data.repository
 
-import com.example.solutionx.features.login.common.exception.EmptyPasswordException
-import com.example.solutionx.features.login.common.exception.SolutionXException
+import com.example.solutionx.features.login.data.mapper.Mapper.mapDomainToEntity
 import com.example.solutionx.features.login.data.mapper.Mapper.mapDtoToDomain
-import com.example.solutionx.features.login.data.models.UserDto
-import com.example.solutionx.features.login.data.remoteDS.ILoginRemoteDS
+import com.example.solutionx.features.login.domain.repository.remoteDS.ILoginRemoteDS
 import com.example.solutionx.features.login.domain.models.User
 import com.example.solutionx.features.login.domain.repository.ILoginRepository
-import javax.inject.Inject
+import com.example.solutionx.features.login.domain.repository.localDS.ILoginLocalDS
 
-class LoginRepositoryImpl @Inject constructor(private val loginRemoteDS: ILoginRemoteDS) :
-    ILoginRepository {
-    private lateinit var user: UserDto
-
-    override suspend fun loginWithEmail(email: String, password: String): User {
-        if (password.isEmpty())
-            throw EmptyPasswordException()
-        try {
-            user = loginRemoteDS.loginEmail(email, password)
-        } catch (e: Exception) {
-            throw SolutionXException(cause = e)
-        }
-        return mapDtoToDomain(user)
+internal class LoginRepositoryImpl(
+    private val remoteDS: ILoginRemoteDS,
+    private val localDS: ILoginLocalDS
+) : ILoginRepository {
+    override fun loginWithEmail(email: String, password: String): User {
+        val result = remoteDS.loginEmail(email, password)
+        return mapDtoToDomain(result)
     }
 
-    override suspend fun loginWithPhone(phoneNumber: Int, password: String): User {
-        if (password.isEmpty())
-            throw EmptyPasswordException()
-        try {
-            user = loginRemoteDS.loginPhone(phoneNumber, password)
-        } catch (e: Exception) {
-            throw SolutionXException(cause = e)
-        }
-        return mapDtoToDomain(user)
+    override fun loginWithPhone(phoneNumber: String, password: String): User {
+        val result = remoteDS.loginPhone(phoneNumber, password)
+        return mapDtoToDomain(result)
     }
 
-    override suspend fun loginWithSocial(email: String, password: String): User {
-        if (password.isEmpty())
-            throw EmptyPasswordException()
-        try {
-            user = loginRemoteDS.loginEmail(email, password)
-        } catch (e: Exception) {
-            throw SolutionXException(cause = e)
-        }
-        return mapDtoToDomain(user)
+    override fun loginWithSocial(email: String, password: String): User {
+        val result = remoteDS.loginSocial(email, password)
+        return mapDtoToDomain(result)
+    }
+
+    override fun saveUser(user: User) {
+        val result = mapDomainToEntity(user)
+        localDS.saveUser(result)
     }
 }

@@ -1,6 +1,7 @@
 package com.example.solutionx.features.login.data.models
 
-data class UserEntity(
+internal data class UserEntity(
+    val accessToken: String,
     val id: Int,
     val name: String,
     val email: String,

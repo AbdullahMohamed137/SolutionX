@@ -1,9 +1,11 @@
 package com.example.solutionx.features.login.domain.di
 
-import com.example.solutionx.features.login.data.remoteDS.ILoginRemoteDS
-import com.example.solutionx.features.login.data.remoteDS.LoginRemoteDsImpl
+import com.example.solutionx.features.login.domain.repository.remoteDS.ILoginRemoteDS
+import com.example.solutionx.features.login.data.repository.remoteDS.LoginRemoteDsImpl
 import com.example.solutionx.features.login.data.repository.LoginRepositoryImpl
+import com.example.solutionx.features.login.data.repository.localDS.LoginLocalDSImpl
 import com.example.solutionx.features.login.domain.repository.ILoginRepository
+import com.example.solutionx.features.login.domain.repository.localDS.ILoginLocalDS
 import com.example.solutionx.features.login.domain.useCases.LoginWithEmailUC
 import com.example.solutionx.features.login.domain.useCases.LoginWithPhoneUC
 import com.example.solutionx.features.login.domain.useCases.LoginWithSocialUC
@@ -12,39 +14,46 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
 @Module
-@InstallIn(SingletonComponent::class)
-class UseCaseModule {
+@InstallIn(ViewModelComponent::class)
+internal class DiModule {
 
     @Provides
-    @Singleton
-    fun provideRepo(loginWithRemoteDS: ILoginRemoteDS) : ILoginRepository {
-        return LoginRepositoryImpl(loginWithRemoteDS)
+    @ViewModelScoped
+    fun provideRepo(
+        loginWithRemoteDS: ILoginRemoteDS,
+        loginLocalDS: ILoginLocalDS
+    ): ILoginRepository {
+        return LoginRepositoryImpl(loginWithRemoteDS, loginLocalDS)
     }
 
     @Provides
-    @Singleton
-    fun provideLoginRemoteDS() : ILoginRemoteDS {
+    @ViewModelScoped
+    fun provideLoginRemoteDS(): ILoginRemoteDS {
         return LoginRemoteDsImpl()
     }
 
     @Provides
-    @Singleton
+    @ViewModelScoped
+    fun provideLoginLocalDS(): ILoginLocalDS {
+        return LoginLocalDSImpl()
+    }
+
+    @Provides
+    @ViewModelScoped
     fun provideUseCaseEmail(loginRepo: ILoginRepository): LoginWithEmailUC {
         return LoginWithEmailUC(loginRepo)
     }
 
     @Provides
-    @Singleton
+    @ViewModelScoped
     fun provideUseCasePhone(loginRepo: ILoginRepository): LoginWithPhoneUC {
         return LoginWithPhoneUC(loginRepo)
     }
 
     @Provides
-    @Singleton
+    @ViewModelScoped
     fun provideUseCaseSocial(loginRepo: ILoginRepository): LoginWithSocialUC {
         return LoginWithSocialUC(loginRepo)
     }

@@ -4,6 +4,10 @@
     <string name="countries">بلاد</string>
     <string name="currencies">العملات</string>
     <string name="filters">المرشحات</string>
+    <string name="fragments">تسجيل الدخول</string>
     <string name="empty_password">كلمة السر فارغة</string>
+    <string name="hello_email_fragment">أهلا تسجيل بالإيميل</string>
+    <string name="hello_phone_fragment">أهلا تسجيل بالموبايل</string>
+    <string name="hello_social_fragment">أهلا تسجيل بطرق أخرى</string>
 
 </resources>

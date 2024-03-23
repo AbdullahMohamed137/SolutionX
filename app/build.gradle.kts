@@ -5,6 +5,9 @@ plugins {
     //dagger
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+
+    //Parcelable
+    id("kotlin-parcelize")
 }
 
 android {

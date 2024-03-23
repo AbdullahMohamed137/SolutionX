@@ -6,8 +6,9 @@ import com.example.solutionx.features.login.domain.models.User
 
 object Mapper {
 
-    fun mapEntityToDomain(userEntity: UserEntity): User {
+    internal fun mapEntityToDomain(userEntity: UserEntity): User {
         return User(
+            userEntity.accessToken,
             userEntity.id,
             userEntity.name,
             userEntity.email,
@@ -15,11 +16,17 @@ object Mapper {
         )
     }
 
-    fun mapDtoToDomain(userDto: UserDto): User {
-        return User(userDto.id, userDto.name, userDto.email, userDto.phoneNumber)
+    internal fun mapDtoToDomain(userDto: UserDto): User {
+        return User(
+            userDto.accessToken.orEmpty(),
+            userDto.id ?: -1,
+            userDto.name.orEmpty(),
+            userDto.email.orEmpty(),
+            userDto.phoneNumber.orEmpty()
+        )
     }
 
-    fun mapDomainToEntity(user: User): UserEntity {
-        return UserEntity(user.id, user.name, user.email, user.phoneNumber)
+    internal fun mapDomainToEntity(user: User): UserEntity {
+        return UserEntity(user.accessToken, user.id, user.name, user.email, user.phoneNumber)
     }
 }

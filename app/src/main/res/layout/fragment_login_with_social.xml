@@ -5,10 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".features.login.presenter.activities.LoginWithSocialFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txt_name"
+        style="@style/TextView.Error"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:text="@string/hello_social_fragment" />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_gravity="center"
+        style="@style/TextView.Error"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        android:text="@string/hello_email_fragment" />
 
 </FrameLayout>
