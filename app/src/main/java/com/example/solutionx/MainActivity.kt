@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.solutionx.activities.FragmentActivity
 import com.example.solutionx.activities.ListActivity
 import com.example.solutionx.databinding.ActivityMainBinding
 import org.json.JSONObject
