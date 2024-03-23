@@ -11,12 +11,12 @@
 
     <com.google.android.material.textview.MaterialTextView
         style="@style/TextView.Bold"
-        android:text="@string/hello_world"
+        android:text="@string/helloWorld"
         android:textSize="20sp" />
 
     <com.google.android.material.textview.MaterialTextView
         style="@style/TextView"
-        android:text="@string/this_is_a_test_app" />
+        android:text="@string/testApp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_country"
