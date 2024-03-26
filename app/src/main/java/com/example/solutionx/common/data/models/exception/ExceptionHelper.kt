@@ -1,9 +1,9 @@
-package com.example.solutionx.common.exception
+package com.example.solutionx.common.data.models.exception
 
-import com.example.solutionx.common.Resource
+import com.example.solutionx.common.data.models.Resource
 
 object ExceptionHelper {
-    fun generalExceptionHandler(e: Throwable): Resource.Failure {
+    fun generalExceptionHandler(e: Exception): Resource.Failure {
         return if (e is SolutionXException)
             when (e) {
                 is SolutionXException.Local.RequestValidation -> {
@@ -13,8 +13,6 @@ object ExceptionHelper {
                     Resource.Failure(exception = e, "something wrong happened")
             }
         else
-            Resource.Failure(
-                exception = e as SolutionXException, "un handled exception, please try again later."
-            )
+            Resource.Failure(SolutionXException.Unknown("un handled exception, please try again later."))
     }
 }

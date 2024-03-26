@@ -5,9 +5,10 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class User(
-    val accessToken: String,
-    val id: Int,
-    val name: String,
-    val email: String,
-    val phoneNumber: String
+    var accessToken: String? = null,
+    val id: String? = null,
+    var name: String? = null,
+    val email: String? = null,
+    var phoneNumber: String? = null,
+    var error: String? = null
 ) : Parcelable

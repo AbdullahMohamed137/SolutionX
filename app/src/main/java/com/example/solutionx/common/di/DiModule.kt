@@ -1,11 +1,10 @@
-package com.example.solutionx.features.login.domain.di
+package com.example.solutionx.common.di
 
-import com.example.solutionx.features.login.domain.repository.remoteDS.ILoginRemoteDS
-import com.example.solutionx.features.login.data.repository.remoteDS.LoginRemoteDsImpl
+import com.example.solutionx.common.domain.repository.remoteDS.ILoginRemoteDS
 import com.example.solutionx.features.login.data.repository.LoginRepositoryImpl
-import com.example.solutionx.features.login.data.repository.localDS.LoginLocalDSImpl
+import com.example.solutionx.common.data.repository.localDS.LoginLocalDSImpl
 import com.example.solutionx.features.login.domain.repository.ILoginRepository
-import com.example.solutionx.features.login.domain.repository.localDS.ILoginLocalDS
+import com.example.solutionx.common.domain.repository.localDS.ILoginLocalDS
 import com.example.solutionx.features.login.domain.useCases.LoginWithEmailUC
 import com.example.solutionx.features.login.domain.useCases.LoginWithPhoneUC
 import com.example.solutionx.features.login.domain.useCases.LoginWithSocialUC
@@ -14,6 +13,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
+import kotlin.coroutines.coroutineContext
 
 @Module
 @InstallIn(ViewModelComponent::class)
@@ -28,11 +28,11 @@ internal class DiModule {
         return LoginRepositoryImpl(loginWithRemoteDS, loginLocalDS)
     }
 
-    @Provides
-    @ViewModelScoped
-    fun provideLoginRemoteDS(): ILoginRemoteDS {
-        return LoginRemoteDsImpl()
-    }
+//    @Provides
+//    @ViewModelScoped
+//    fun provideLoginRemoteDS(): ILoginRemoteDS {
+//        return LoginRemoteDsImpl()
+//    }
 
     @Provides
     @ViewModelScoped

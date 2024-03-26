@@ -9,7 +9,7 @@
         android:id="@+id/txt_name"
         android:layout_gravity="center"
         style="@style/TextView.Medium"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:text="@string/hello_phone_fragment" />
 
     <TextView

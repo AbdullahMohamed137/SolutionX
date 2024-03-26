@@ -1,6 +1,6 @@
-package com.example.solutionx.common
+package com.example.solutionx.common.data.models
 
-import com.example.solutionx.common.exception.SolutionXException
+import com.example.solutionx.common.data.models.exception.SolutionXException
 
 sealed class Resource<out Model> {
     data class Loading(val loading: Boolean) : Resource<Nothing>()

@@ -1,4 +1,4 @@
-package com.example.solutionx.common.exception
+package com.example.solutionx.common.data.models.exception
 
 import androidx.annotation.StringRes
 import com.example.solutionx.R

@@ -30,15 +30,15 @@ class LoginWithSocialFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        vm.getUserSocial("user@another.com", "12345")
-        lifecycleScope.launch {
-            vm.users.collect{
-                it?.let {
-                    binding.txtName.text = it.name
-                    binding.txtEmail.text = it.email
-                }
-            }
-        }
+//        vm.getUserSocial("user@another.com", "12345")
+//        lifecycleScope.launch {
+//            vm.users.collect{
+//                it?.let {
+//                    binding.txtName.text = it.name
+//                    binding.txtEmail.text = it.email
+//                }
+//            }
+//        }
     }
 
 

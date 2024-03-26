@@ -33,15 +33,15 @@ class LoginWithEmailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        vm.getUserWithEmail("user@gmail.com", "12345")
-        lifecycleScope.launch {
-            vm.users.collect {
-                it?.let {
-                    binding.txtName.text = it.name
-                    binding.txtEmail.text = it.email
-                }
-            }
-        }
+//        vm.getUserWithEmail("user@gmail.com", "12345")
+//        lifecycleScope.launch {
+//            vm.users.collect {
+//                it?.let {
+//                    binding.txtName.text = it.name
+//                    binding.txtEmail.text = it.email
+//                }
+//            }
+//        }
     }
 
 }
