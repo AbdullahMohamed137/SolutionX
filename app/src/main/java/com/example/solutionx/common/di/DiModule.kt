@@ -1,5 +1,6 @@
 package com.example.solutionx.common.di
 
+import android.content.Context
 import com.example.solutionx.common.domain.repository.remoteDS.ILoginRemoteDS
 import com.example.solutionx.features.login.data.repository.LoginRepositoryImpl
 import com.example.solutionx.common.data.repository.localDS.LoginLocalDSImpl
@@ -12,8 +13,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ViewModelScoped
-import kotlin.coroutines.coroutineContext
 
 @Module
 @InstallIn(ViewModelComponent::class)
@@ -36,8 +37,8 @@ internal class DiModule {
 
     @Provides
     @ViewModelScoped
-    fun provideLoginLocalDS(): ILoginLocalDS {
-        return LoginLocalDSImpl()
+    fun provideLoginLocalDS(@ApplicationContext context: Context): ILoginLocalDS {
+        return LoginLocalDSImpl(context)
     }
 
     @Provides

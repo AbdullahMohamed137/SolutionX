@@ -68,12 +68,6 @@ internal class LoginViewModel @Inject constructor(
         }
     }
 
-    suspend fun saveUserFromLocalDS(user: User) {
-        userWithPhoneUC.saveUserToLocalDS(user)
-    }
-    suspend fun getUserFromLocalDS() = userWithPhoneUC.getUserFromLocalDS()
-
-
 
 
 

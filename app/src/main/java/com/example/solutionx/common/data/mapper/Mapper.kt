@@ -1,5 +1,6 @@
 package com.example.solutionx.common.data.mapper
 
+import android.util.Log
 import com.example.solutionx.features.login.domain.models.response.Login
 import com.example.solutionx.features.login.data.models.UserEntity
 import com.example.solutionx.features.login.domain.models.User

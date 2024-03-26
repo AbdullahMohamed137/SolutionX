@@ -39,28 +39,24 @@ class LoginWithPhoneFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
         val phone = Phone("0020", number = "100100100")
         val user = UserDto(phone = phone, password = "123456789")
 
         vm.getUserPhone(user)
         lifecycleScope.launch {
             vm.users.collect {
-                it?.let {
-                    vm.saveUserFromLocalDS(it)
-                    val savedUser = vm.getUserFromLocalDS()
-                    if (it.error == null){
-                         binding.txtName.text = it.name
+                if (it != null) {
+                    if (it.error == null) {
+                        binding.txtName.text = it.name
                         binding.txtPhone.text = it.phoneNumber
-                        //Log.e("pjionibbjhyubijbyuijkihnjk", "${vm.getUserFromLocalDS().name}")
 
-                        Toast.makeText(context, "Login is done successfully", Toast.LENGTH_SHORT).show()
-                    }else{
-                        binding.txtName.text = vm.getUserFromLocalDS().name
-                        binding.txtPhone.text = vm.getUserFromLocalDS().phoneNumber
-                       // Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Login is done successfully", Toast.LENGTH_SHORT)
+                            .show()
+                    } else {
+                        binding.txtName.text = it.name
+                        binding.txtPhone.text = it.phoneNumber
+                        Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show()
                     }
-
                 }
             }
         }

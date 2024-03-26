@@ -1,5 +1,6 @@
 package com.example.solutionx.features.login.data.repository
 
+import android.util.Log
 import com.example.solutionx.common.data.mapper.Mapper.mapDomainToEntity
 import com.example.solutionx.common.data.mapper.Mapper.mapDtoToDomain
 import com.example.solutionx.common.data.mapper.Mapper.mapEntityToDomain
