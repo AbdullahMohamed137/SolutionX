@@ -1,6 +1,6 @@
 package com.example.solutionx.common.di
 
-import com.example.solutionx.common.domain.repository.remoteDS.ILoginRemoteDS
+import com.example.solutionx.features.login.domain.repository.remoteDS.ILoginRemoteDS
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,11 +1,11 @@
 package com.example.solutionx.common.di
 
 import android.content.Context
-import com.example.solutionx.common.domain.repository.remoteDS.ILoginRemoteDS
+import com.example.solutionx.features.login.domain.repository.remoteDS.ILoginRemoteDS
 import com.example.solutionx.features.login.data.repository.LoginRepositoryImpl
-import com.example.solutionx.common.data.repository.localDS.LoginLocalDSImpl
+import com.example.solutionx.features.login.data.repository.localDS.LoginLocalDSImpl
 import com.example.solutionx.features.login.domain.repository.ILoginRepository
-import com.example.solutionx.common.domain.repository.localDS.ILoginLocalDS
+import com.example.solutionx.features.login.domain.repository.localDS.ILoginLocalDS
 import com.example.solutionx.features.login.domain.useCases.LoginWithEmailUC
 import com.example.solutionx.features.login.domain.useCases.LoginWithPhoneUC
 import com.example.solutionx.features.login.domain.useCases.LoginWithSocialUC

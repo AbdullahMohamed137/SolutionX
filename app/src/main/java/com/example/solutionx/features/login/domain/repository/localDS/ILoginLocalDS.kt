@@ -1,4 +1,4 @@
-package com.example.solutionx.common.domain.repository.localDS
+package com.example.solutionx.features.login.domain.repository.localDS
 
 import com.example.solutionx.features.login.data.models.UserEntity
 

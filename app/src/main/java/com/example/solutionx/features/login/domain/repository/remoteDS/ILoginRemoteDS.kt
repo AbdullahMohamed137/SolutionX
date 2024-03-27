@@ -1,4 +1,4 @@
-package com.example.solutionx.common.domain.repository.remoteDS
+package com.example.solutionx.features.login.domain.repository.remoteDS
 
 import com.example.solutionx.features.login.domain.models.response.Login
 import com.example.solutionx.features.login.data.models.UserDto

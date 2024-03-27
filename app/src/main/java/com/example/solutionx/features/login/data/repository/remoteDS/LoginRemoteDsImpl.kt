@@ -1,9 +1,9 @@
-//package com.example.solutionx.common.data.repository.remoteDS
+//package com.example.solutionx.features.login.data.repository.remoteDS
 //
 //import com.example.solutionx.features.login.domain.models.response.Login
 //import com.example.solutionx.features.login.domain.models.response.User
 //import com.example.solutionx.features.login.data.models.UserDto
-//import com.example.solutionx.common.domain.repository.remoteDS.ILoginRemoteDS
+//import com.example.solutionx.features.login.domain.repository.remoteDS.ILoginRemoteDS
 //
 //internal class LoginRemoteDsImpl : ILoginRemoteDS {
 //

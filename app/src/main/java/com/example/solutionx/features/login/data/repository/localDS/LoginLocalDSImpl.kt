@@ -1,17 +1,14 @@
-package com.example.solutionx.common.data.repository.localDS
+package com.example.solutionx.features.login.data.repository.localDS
 
 import android.content.Context
-import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.solutionx.features.login.data.models.UserEntity
-import com.example.solutionx.common.domain.repository.localDS.ILoginLocalDS
+import com.example.solutionx.features.login.domain.repository.localDS.ILoginLocalDS
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.firstOrNull
-import kotlinx.coroutines.flow.map
 
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore("login")
